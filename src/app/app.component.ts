@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'about-angular';
+  list = ['Milk', 'Sugar', 'Bread'];
+
+  onAdd(item) {
+    this.list.push(item);
+  }
+
+  onDelete(item) {
+    this.list.reduce(item);
+  }
 }
