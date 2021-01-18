@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 offset-sm-1 offset-md-2">
+      <h4>Dynamic Checkbox</h4>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="checkbox-group" style="margin-top: 2rem">
+          <div
+            class="checkbox-wrap"
+            id="productsContainer"
+            formArrayName="user"
+          >
+            <div *ngFor="let site of checkboxValues; let i = index">
+              <input
+                type="checkbox"
+                [checked]="checkValue(site.id)"
+                value="site.id"
+                [formArrayName]="i"
+              />
+              <label [for]="i">{{ site.name }}</label>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
