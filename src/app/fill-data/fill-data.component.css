@@ -1,0 +1,10 @@
+.card{
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  position: relative;
+  background: #fff;
+  box-shadow: 12px 15px 20px 10px rgba(10,10,10,0.15);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
